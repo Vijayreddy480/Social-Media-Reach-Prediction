@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-import pickle
 import numpy as np
 import datetime
 import pandas as pd
@@ -111,14 +110,14 @@ else:
     input_array = np.array(input_values).reshape(1, -1)
 
     with open("scaler11.pkl", "rb") as f:
-        scaler = pickle.load(f)
+        scaler =pd.read_pickle(f)
     input_array = scaler.transform(input_array) 
     X_test = pd.DataFrame(input_array, columns=['view_count', 'video_count', 'no_of_years',
         'avg_views_per_video'])
     # Predict button
     if st.button("Predict"):
         with open('lasso_2.pkl', "rb") as f:
-            model=pickle.load(f)
+            model=pd.read_pickle(f)
             ans=model.predict(X_test)
         results_df = pd.DataFrame(data=[[view_count, video_count, no_of_years,avg_vies,ans]], columns=['view_count', 'video_count', 'no_of_years','avg_views_per_video', "Prediction"])
         st.dataframe(results_df)
