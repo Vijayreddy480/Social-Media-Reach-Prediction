@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import numpy as np
+import joblib
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -110,14 +111,14 @@ else:
     input_array = np.array(input_values).reshape(1, -1)
 
     with open("scaler11.pkl", "rb") as f:
-        scaler =pd.read_pickle(f)
+        scaler =joblib.load(f)
     input_array = scaler.transform(input_array) 
     X_test = pd.DataFrame(input_array, columns=['view_count', 'video_count', 'no_of_years',
         'avg_views_per_video'])
     # Predict button
     if st.button("Predict"):
         with open('lasso_2.pkl', "rb") as f:
-            model=pd.read_pickle(f)
+            model=joblib.load(f)
             ans=model.predict(X_test)
         results_df = pd.DataFrame(data=[[view_count, video_count, no_of_years,avg_vies,ans]], columns=['view_count', 'video_count', 'no_of_years','avg_views_per_video', "Prediction"])
         st.dataframe(results_df)
