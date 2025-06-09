@@ -48,7 +48,7 @@ if selected == 'Home':
         st.write("Creators often track the number of subscribers gained from a sample set of videos to estimate overall channel growth. The subscriber increase from those videos is measured, and the total subscriber growth for the channel is extrapolated based on engagement patterns and audience reach. This helps creators refine their content strategies and predict future audience expansion")
         st.write("YouTube subscriber growth can also refer to the actual audience expansion from existing viewers. ")
     with coly:
-        st.image(r"C:\Users\gurra\free-youtube-logo-icon-2431-thumb.png")
+        st.image("free-youtube-logo-icon-2431-thumb.png")
     st.subheader(":red[Factors affecting subscriber_count:]", divider='blue')
     colx, coly, colz = st.columns([0.2,0.6,0.2])
     st.write(":blue[View_count :] youtube Subscriber_count can estimate through the No of Views of the channel.")
@@ -64,7 +64,7 @@ elif selected == 'Project Overview':
     st.write("1530 channels info having 180 factors from 2012 to 2024")
     colx, coly, colz = st.columns([0.2,0.4,0.2])
     with coly:
-        st.image(r"C:\Users\gurra\info.png")
+        st.image("info.png")
     st.subheader(":green[Predictive Modeling @ Machine Learning]", divider='blue')
     st.write("For the above data, taken subscriber_count column as output (y).")
     colx, coly, colz = st.columns([0.2,0.1,0.2])
