@@ -86,7 +86,7 @@ elif selected == 'Project Overview':
     st.write(":blue[Models Performance Scores:]")
     colx, coly, colz = st.columns([0.2,0.4,0.2])
     with coly:
-        st.image(r"C:\Users\gurra\model_performance.png")
+        st.image("model_performance.png")
     st.write(":blue[Among the above models we got better performance for Lasso and Linear Regressor Regressor]")
     st.write("Lasso Trained Model is Connected for Subscriber Estimations..Click on it for Prediction")
 
