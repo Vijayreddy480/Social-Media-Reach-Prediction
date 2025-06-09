@@ -38,8 +38,8 @@ with st.sidebar:
         }
     )
 
-df=pd.read_csv(r"C:\Users\gurra\channel_details.csv")
-inp_data=pd.read_csv(r'C:\Users\gurra\channel_details_final.csv')
+df=pd.read_csv("channel_details.csv")
+inp_data=pd.read_csv('channel_details_final.csv')
 if selected == 'Home':
     st.subheader(":green[Youtube Subscrbers_count]",divider='blue')
     st.write("YouTube subscriber count represents the number of subscribers gained per unit of effort. Creators measure their success by tracking subscriber growth per video, per month, or through specific marketing campaigns. A high-growth channel consistently attracts large numbers of new subscribers, while a slow-growing one may struggle despite regular content uploads. Optimizing content strategy, engagement, and audience targeting can significantly improve subscriber growth over time.")
@@ -110,14 +110,14 @@ else:
     input_values = [view_count, video_count, no_of_years,avg_vies]
     input_array = np.array(input_values).reshape(1, -1)
 
-    with open(r"C:\Users\gurra\scaler11.pkl", "rb") as f:
+    with open("scaler11.pkl", "rb") as f:
         scaler = pickle.load(f)
     input_array = scaler.transform(input_array) 
     X_test = pd.DataFrame(input_array, columns=['view_count', 'video_count', 'no_of_years',
         'avg_views_per_video'])
     # Predict button
     if st.button("Predict"):
-        with open(r'C:\Users\gurra\lasso_2.pkl', "rb") as f:
+        with open('lasso_2.pkl', "rb") as f:
             model=pickle.load(f)
             ans=model.predict(X_test)
         results_df = pd.DataFrame(data=[[view_count, video_count, no_of_years,avg_vies,ans]], columns=['view_count', 'video_count', 'no_of_years','avg_views_per_video', "Prediction"])
