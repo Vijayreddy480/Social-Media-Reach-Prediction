@@ -49,3 +49,9 @@
 --🔄 Feature scaling for different magnitudes (e.g., likes vs subscribers)
 
 --🧪 Hyperparameter tuning for Lasso (alpha selection)
+## 🌐 Live Demo
+
+🚀 Check out the working Streamlit application here:  
+👉 **[Social Media Reach Predictor](https://social-media-reach-prediction-tbxp4fshqjkrb3fp6rrzhh.streamlit.app/)**
+
+Use this interactive web app to upload a dataset or manually input metrics like views, likes, and subscriber count to get a **predicted engagement reach** using the Lasso regression model.
