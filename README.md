@@ -34,18 +34,18 @@
 | `Channel Name`    | Name of the content creator               |
 
 ---
-🧠 Final Model: Lasso Regression
-After evaluating several regression algorithms (Linear, Ridge, Random Forest, XGBoost), Lasso Regression was chosen due to its:
+## 🧠 Final Model: Lasso Regression
+--After evaluating several regression algorithms (Linear, Ridge, Random Forest, XGBoost), Lasso Regression was chosen due to its:
 
-.🔍 Feature selection (shrinks irrelevant features)
+--🔍 Feature selection (shrinks irrelevant features)
 
-.📉 Balance between accuracy and model simplicity
+--📉 Balance between accuracy and model simplicity
 
-.🧠 Stability with multicollinear data
+--🧠 Stability with multicollinear data
 
-⚠️ Challenges Addressed
-.🧹 Missing or inconsistent engagement data
+## ⚠️ Challenges Addressed
+--🧹 Missing or inconsistent engagement data
 
-.🔄 Feature scaling for different magnitudes (e.g., likes vs subscribers)
+--🔄 Feature scaling for different magnitudes (e.g., likes vs subscribers)
 
-.🧪 Hyperparameter tuning for Lasso (alpha selection)
+--🧪 Hyperparameter tuning for Lasso (alpha selection)
