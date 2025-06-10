@@ -91,6 +91,7 @@ elif selected == 'Project Overview':
     st.write("Lasso Trained Model is Connected for Subscriber Estimations..Click on it for Prediction")
 
 else:
+    st.write("please enter the Date between 2015 to 2024")
     selected_date = st.date_input("Select channel created date Date", datetime.date.today(),min_value=datetime.date(1999, 1, 1))
     selected_date= pd.to_datetime(str(selected_date)) 
     year = selected_date.year
@@ -98,7 +99,9 @@ else:
     day_of_week = selected_date.weekday()
 
     # Numerical features
+    st.write("please enter the veiw count greater than one million")
     view_count = st.number_input("Enter View Count", value=0)
+    st.write("please enter the video count greater than 100")
     video_count = st.number_input("Enter Video Count", value=0)
     dat=pd.to_datetime('2025-05-05')
     no_of_years=(dat-selected_date).days/365 
